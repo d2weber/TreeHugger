@@ -2,7 +2,6 @@
 	import { spring } from 'svelte/motion';
 	import tree from '$lib/images/tree.png';
 
-
 	let count = 0;
 
 	const displayed_count = spring();
@@ -22,7 +21,7 @@
 			<strong>{Math.floor($displayed_count)}</strong>
 		</div>
 	</div>
-	<img on:click={() => (count += 1)} src={tree} alt="Tree">
+	<img on:click={() => (count += 1)} src={tree} alt="Tree" />
 </div>
 
 <style>
