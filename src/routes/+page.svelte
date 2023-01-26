@@ -3,13 +3,11 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>TreeHugger</title>
+	<meta name="description" content="Hug a tree" />
 </svelte:head>
 
 <section>
-	<h1>Tree-Hugger</h1>
-
 	<Counter />
 </section>
 
