@@ -23,17 +23,28 @@
 </script>
 
 {#each $messages as msg (msg.id)}
-	<div in:fly={{ duration: 400, x: 500, easing: quadOut }} out:fly={{ duration: 200, x: -500 }}>
+	<div
+		class="alert alert-info shadow-lg"
+		in:fly={{ duration: 400, x: 500, easing: quadOut }}
+		out:fly={{ duration: 200, x: -500 }}
+	>
 		<p>{msg.description}</p>
-		<button on:click={() => messages.remove(msg)}>
-			<svg viewBox="0 0 24 24">
-				<path
-					fill="currentColor"
-					stroke="none"
-					d="M22 4.2h-5.6L15 1.6c-.1-.2-.4-.4-.7-.4H9.6c-.2 0-.5.2-.6.4L7.6 4.2H2c-.4 0-.8.4-.8.8s.4.8.8.8h1.8V22c0 .4.3.8.8.8h15c.4 0 .8-.3.8-.8V5.8H22c.4 0 .8-.3.8-.8s-.4-.8-.8-.8zM10.8 16.5c0 .4-.3.8-.8.8s-.8-.3-.8-.8V10c0-.4.3-.8.8-.8s.8.3.8.8v6.5zm4 0c0 .4-.3.8-.8.8s-.8-.3-.8-.8V10c0-.4.3-.8.8-.8s.8.3.8.8v6.5z"
-				/>
-			</svg>
-		</button>
+		<div class="flex-none">
+			<button class="btn btn-sm btn-ghost" on:click={() => messages.remove(msg)}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="stroke-current flex-shrink-0 h-6 w-6"
+					fill="none"
+					viewBox="0 0 24 24"
+					><path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+					/></svg
+				></button
+			>
+		</div>
 	</div>
 {/each}
 
@@ -68,7 +79,6 @@
 		width: 100%;
 		height: 100%;
 		font-weight: 400;
-		color: var(--color-theme-1);
 		font-size: 4rem;
 		align-items: center;
 		justify-content: center;
